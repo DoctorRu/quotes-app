@@ -14,9 +14,8 @@
     </ion-card-content>
     <ion-row>
       <ion-col text-right>
-        <button ion-button clear small (click)="onAddToFavourite(quote)">
-          Favourite
-        </button>
+        <button ion-button clear small (click)="onAddToFavorites(quote)">Favorite</button>
+        <button ion-button clear small (click)="onRemoveFromFavorites(quote)" color="danger">Unfavorite</button>
       </ion-col>
     </ion-row>
   </ion-card>
