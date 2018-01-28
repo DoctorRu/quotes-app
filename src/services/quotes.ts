@@ -18,4 +18,17 @@ export class QuotesService {
   getFavoriteQuotes(){
     return this.favoriteQuotes.slice();
   }
+
+  isQuoteFavorite(quote: Quote){
+    return this.favoriteQuotes.find((quoteEl: Quote) => {
+      return  quoteEl.id == quote.id
+    });
+
+    // x.find...
+    // equivale a:
+    //
+    // def arrayFind(quote)
+    //   favoriteQuotes.each {|quoteEl| quoteEl.id == quote.id ? true : false}
+    // end
+  }
 }

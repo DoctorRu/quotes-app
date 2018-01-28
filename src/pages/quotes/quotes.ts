@@ -53,7 +53,11 @@ export class QuotesPage implements OnInit {
 
 
   onRemoveFromFavorites(quote: Quote){
+    this.quotesService.removeQuoteFromFavorites(quote);
+  }
 
+  isFavorite(quote: Quote){
+    return this.quotesService.isQuoteFavorite(quote);
   }
 
   // ionViewDidLoad(){
